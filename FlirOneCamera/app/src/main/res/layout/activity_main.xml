@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:accessibilityLiveRegion="none"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Title  -->
+
+    <!-- Show SDK version  -->
+
+    <!-- Start / Stop discovery buttons  -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_text"
+        android:textSize="20sp" />
+
+    <!-- Connect to FLIR ONE / Emulators buttons  -->
+
+
+    <TextView
+        android:id="@+id/sdk_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sdk_version_text"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_discovery"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:onClick="startDiscovery"
+            android:text="@string/start_discovery_text" />
+
+        <Button
+            android:id="@+id/stop_discovery"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:onClick="stopDiscovery"
+            android:text="@string/stop_discovery_text" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/discovery_status"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/discovery_status_text"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/connect_flir_one"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_gravity="fill"
+            android:gravity="center"
+            android:onClick="connectFlirOne"
+            android:text="@string/connect_f1_text" />
+
+        <Button
+            android:id="@+id/disconnect_any"
+            android:layout_width="152dp"
+            android:layout_height="52dp"
+            android:layout_gravity="fill"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="disconnect"
+            android:text="@string/disconnect_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connection_status_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connection_status_text"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="214dp">
+
+        <ImageView
+            android:id="@+id/msx_image"
+            android:layout_width="195dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:contentDescription="@string/image_with_ir_and_visual_data_mixed"
+            android:maxWidth="50dp"
+            android:minWidth="50dp" />
+
+        <ImageView
+            android:id="@+id/photo_image"
+            android:layout_width="178dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/image_with_only_visual_image"
+            android:maxWidth="50dp"
+            android:minWidth="50dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/temp_title"
+        android:layout_width="182dp"
+        android:layout_height="32dp"
+        android:text="@string/temp_title"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/target_temp_text"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:text="@string/_0"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start_rec_button"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:onClick="startRecording"
+            android:text="@string/start_rec_text" />
+
+        <Button
+            android:id="@+id/stop_rec_button"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:onClick="stopRecording"
+            android:text="@string/stop_rec_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/save_path_title"
+        android:layout_width="401dp"
+        android:layout_height="30dp"
+        android:text="@string/save_path_title"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/save_path_text"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp" />
+
+
+</LinearLayout>
